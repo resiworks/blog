@@ -1,7 +1,10 @@
 .cask
+<<<<<<< HEAD
 public
 *.log
 *.elc
 theindex.inc
 theindex.org
 index.org
+=======
+>>>>>>> orgpress/master

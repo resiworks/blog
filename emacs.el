@@ -29,7 +29,7 @@
         :base-directory ,blog-path
         :base-extension "org"
         :html-doctype "html5"
-        :html-head "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/style/main.css\" /><link rel=\"alternate\" type=\"application/rss+xml\" title=\"ResiWorks\" href=\"http://www.yoursite.com/index.xml\">"
+        :html-head "<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/style/main.css\" /><link rel=\"alternate\" type=\"application/rss+xml\" title=\"ResiWorks\" href=\"http://resiworks.github.io/index.xml\">"
         :html-html5-fancy t
         :html-postamble ,postamble
         ;; HTML directory
@@ -37,11 +37,13 @@
         :publishing-function org-html-publish-to-html
         :recursive t
         :headline-levels 4
+        :with-sub-superscript nil
         :section-numbers nil
         :html-preamble ,preamble
         :auto-preamble nil
         :auto-sitemap t
         :sitemap-filename "index.org"
+        :exclude "\!.*\.org"
         :sitemap-function org-blog-export
         :blog-entry-format ,config-entry-format
         :blog-export-dates t
@@ -62,7 +64,7 @@
        ("rss"
          :base-directory ,blog-path
          :base-extension "org"
-         :html-link-home ,config-home-link
+         :html-link-home ,config-base-url
          :html-link-use-abs-url t
          :rss-extension "xml"
          :publishing-directory "public"
