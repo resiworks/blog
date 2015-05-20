@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 (setq config-blog-title "ResiWorks"
       config-base-url "http://resiworks.github.io"
       config-home-link "/resiworks.html"
